@@ -24,3 +24,14 @@ git remote add skriptimine https://github.com/AndriParts/skriptimine.git
 
 b) git remote kontroll
 git remote -v
+
+põhikasutamine:
+
+a) pane fail jälgimisele
+git add git_kasutamine
+
+b) lisa kirjelduse muudatuse kohta
+git commit -m "remote seadistamine"
+
+c) lisa kaugrepositooriumi
+git push -uf skriptimine master

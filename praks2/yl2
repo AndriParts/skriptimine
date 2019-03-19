@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# script mis väljastab muljeid enda saavutustest antud aines
+#
+echo "Andri Parts " # väljasta Andri Parts ja tee reavahetus
+echo "ISP118 õpperühm "  # väljasta ISP118 õpperühm ja tee reavahetus
+echo "Huvitav aine on, sain palju uusi asju teada "  # väljasta Huvitav aine on, sain palju uusi asju teada ja tee reavahetus
+echo "Siiamaani oskan enam-vähem skripti kirjutada "  # väljasta Siiamaani oskan enam-vähem skripti kirjutada ja tee reavahetus
+#
+#skripti lõpp

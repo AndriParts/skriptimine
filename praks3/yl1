@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# skript mis näitab kuupäeva ja kalendrit
+echo -n "Today is " #väljasta ilma reavahetuseta Today is,
+echo $(date +"%B %-d, %Y") #näitab kuupäeva
+echo -n "Time is " #väljastab reavahetusega Time is
+date "+%H:%M" #väljastab kellaaja
+echo " " #tühi rida
+echo -n "Calender of" #väljastab reavahetuseta Calendar of
+cal #väljastab kalendri
+#
+#skripti lõpp

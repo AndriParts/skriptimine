@@ -1,0 +1,6 @@
+#!/bin/bash
+#script mis otsib faile, kontrollob mitu rida on failis
+#
+find /var -name "*.log" -type f 2>/dev/null -exec wc -l {} + | sort -rn #leiab .var lõpuga faile
+#
+#scripti lõpp

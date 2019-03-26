@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+#skript mis aitab kokkadel küpsisetorti valmistada
+#
+#küsimused
+#
+echo "Sisesta aluskandiku pikkus(cm): " #väljastab küsimuse
+read aluspikkus #loeb vastuse
+echo "Sisesta aluskandiku laius(cm): " #väljastab küsimuse
+read aluslaius #loeb vastuse
+echo "Sisestage küpsise pikkus(cm): " #väljastab küsimuse
+read kypspikkus #loeb vastuse
+echo "Sisetage küpsise laius(cm): " #väljastab küsimuse
+read kypslaius #loeb vastuse
+echo "Sisetage kihtide arv:" #väljastab küsimuse
+read kihid #loeb vastuse
+echo "Mitu küpsist on ühes pakis: " #väljastab küsimuse
+read pakis #loeb vastuse
+#
+#Arvutamine
+#
+laiusarv=$(expr $aluslaius / $kypslaius) #arvutab laiuses küpsiste arvu
+echo "Laiusena läheb" $laiusarv "küpsist" #väljastab küpsiste arvu
+pikkusarv=$(expr $aluspikkus / $kypspikkus) #arvutab pikkuses küpsiste arvu
+echo "Pikkusena läheb" $pikkusarv "küpsist" #väljastab laiuses küpsiste arvu
+aluskord=$(expr $pikkusarv \* $laiusarv) #arvutab kui palju küpsiseid on põhjaks
+echo "Põhjaks läheb kokku" $aluskord "küpsist" #väljasta mitu küpsist läheb põhjaks
+kihidko=$(expr $aluskord \* $kihid) #arvutab kihtidesse minevate küpsiste arvu
+echo "Kokku tuleb" $kihidko "küpsist koogile" #väljastab kui palju läheb küpsiseid koogile kokku
+pakiarv=$(expr $kihidko / $pakis) #arvutab mitu pakki küpsiseid on vaja
+echo "Kokku tuleb osta" $pakiarv "pakki küpsiseid" #väljastab mitu pakki küpsiseid on vaja osta
+#
+#skripti lõpp

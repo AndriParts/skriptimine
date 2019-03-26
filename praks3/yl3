@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+#skript mis näitab kui kaua masin töötanud on
+#
+echo -n "skriptimine at " #väljasta ilma reavahetuseta skriptimine at
+uptime | cut -f1 -d "," #käsk mis näitab kui kaua masin töötanud on
+#
+#skripti lõpp

@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#skript mis on abiks bussiekskursioonide korraldajale
+#
+#küsimused
+#
+echo "Mitu reisijat tuleb?" #väljastab küsimuse
+read reis #loeb vastuse
+echo "Mitu kohta on bussis?" #väljastab küsimuse
+read bussik #loeb vastuse
+#
+#arvutused
+#
+bussiarv="expr $reis / $bussik" #arvutab busside arvu
+echo "Tuleb tellida" $bussiarv "bussi" #väljastab mitu bussi tuleb tellida
+maha="expr $bussiarv \* $bussik" #arvutab kui palju inimesi mahub bussidesse
+maha1="expr $reis - $maha" #arvutab kui palju inimesu jääb maha
+echo "Maha jääb" $maha1 "reisijat" #väljastab kui palju inimesi maha jääb
+#
+#skripti lõpp

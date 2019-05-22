@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+#skript mis ütleb kas on algarv või mitte
+#
+echo -e "Sisesta arv: \c"
+read arv
+if [ $arv -eq 0 -o $arv -eq 1 ]; then
+echo "$arv ei ole algarv"
+else
+jagaja=2
+jaak=$(($arv % $jagaja))
+while [ $jaak -ne 0 ]
+do
+jagaja=$(($jagaja + 1))
+jaak=$(($arv % $jagaja))
+done
+if [ $arv -eq $jagaja ]; then
+echo "$arv on algarv"
+else
+echo "$arv ei ole algarv"
+fi
+fi
+echo -n "Arvud 1-20: "
+for (( num=1; num<=20; num++ ))
+do
+jagub=0
+for (( div=1; div<=$num; div++))
+do
+jaak=$(($num % $div))
+if ((jaak == 0)); then
+let jagub++
+fi
+done
+if ((jagub <= 2)); then
+echo "$num on algarv"
+else
+echo "$num ei ole algarv"
+fi
+done
+#
+#skripti lõpp

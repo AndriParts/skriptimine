@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#skript mis arvutab 10 arvu summa
+#
+echo -n "Sisesta arv: "
+read arv
+summa=0
+for (( arv=1; arv<11; arv++ ))
+do
+jaak=$(($arv % 2))
+if [ $jaak == 0 ]; then
+summa=$(( $summa+$arv ))
+echo $summa
+fi
+done
+echo "Vahemikus 1-10 on paarisarvude summaks: $summa"
+#
+#skripti lõpp

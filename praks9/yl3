@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+#skript mis väljastab teatud kujundi
+echo "Sisesta ridade arv: "
+read rida
+echo "Sisesta sümbolite arv: "
+read sim
+num=1
+for (( i = 1; i <= $rida; i++ ))
+do
+echo -n "$num. "
+let num++
+for (( j = 1; j <=$sim; j++ ))
+do
+if (($i == 1 || $i == $rida)); then
+echo -n "* "
+elif (($j == 1 || $j == $sim)); then
+echo -n "* "
+else
+echo -n " "
+fi
+done
+echo ""
+done
+#
+#skripti lõpp

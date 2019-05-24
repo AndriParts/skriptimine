@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+#skript mis laseb sisestada ridade arvu ja reas olevate sümbolite arvu ning väljastab sellele vastavalt kujundi
+echo "Sisestage ridade arv: "
+read rida
+echo "Sisestage sümbolite arv reas: "
+read sim
+num=1
+for (( i = 1; i <= $rida; i++ ))
+do
+echo -n "$num. "
+let num++
+for (( j = 1; j <= $sim; j++ ))
+do
+echo -n "* "
+done
+echo ""
+done
+#
+#skripti lõpp

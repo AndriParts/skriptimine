@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#skript mis küsib kuu numbrit ja väljastab selle põhjal aastaaja nimetuse
+echo "Sisesta kuu number: "
+read kuu
+if test $kuu -eq 2 -o $kuu -eq 12
+then
+echo "Praegu on talv"
+elif test $kuu -ge 3 -a $kuu -lt 5
+then
+echo "Praegu on kevad"
+elif test $kuu -ge 6 -a $kuu -lt 8
+then
+echo "Praegu on suvi"
+elif test $kuu -ge 9 -a $kuu -lt 11
+then
+echo "Praegu on sügis"
+fi

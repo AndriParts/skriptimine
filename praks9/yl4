@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#skript mis teeb kujundi
+echo -n "Sisestage ridade arv: "
+read rida
+num=1
+for (( i = 1; i <= $rida; i++ ))
+do
+echo -n "$num."
+let num++
+for (( j = 1; j <= $i; j++ ))
+do
+echo -n "* "
+done
+echo ""
+done
